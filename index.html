@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GAME SHOP - PRO JAILBREAK</title>
+<title>PRO JAILBREAK</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,20 +28,18 @@
     direction: rtl; overflow: hidden;
   }
 
-  /* تعتيم الخلفية */
   body::before {
     content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
     z-index: 0;
   }
 
-  /* الحاوية الأساسية (تصميم مضلع) */
   .hud-container {
-    position: relative; z-index: 1; width: 95%; max-width: 900px;
+    position: relative; z-index: 1; width: 95%; max-width: 800px;
     background: var(--dark-bg);
     border: 2px solid var(--neon-blue);
     clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
-    padding: 40px 30px;
+    padding: 50px 30px;
     box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
   }
 
@@ -51,7 +49,6 @@
     z-index: -1; clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
   }
 
-  /* العناوين */
   .brand-title {
     font-family: 'Orbitron', sans-serif; font-size: 4.5rem; font-weight: 900;
     text-align: center; margin-bottom: 5px; letter-spacing: 4px; direction: ltr;
@@ -63,20 +60,12 @@
   .brand-sub {
     font-size: 1.5rem; text-align: center; color: var(--neon-purple);
     font-weight: 900; letter-spacing: 2px; text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(176, 0, 255, 0.5); margin-bottom: 20px; direction: ltr;
+    text-shadow: 0 0 10px rgba(176, 0, 255, 0.5); margin-bottom: 30px; direction: ltr;
   }
 
-  .engineer-badge {
-    display: table; margin: 0 auto 30px; background: var(--neon-purple);
-    color: #fff; padding: 5px 30px; font-size: 1.3rem; font-weight: 900;
-    clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
-    box-shadow: 0 0 20px rgba(176, 0, 255, 0.5);
-  }
-
-  /* شاشة الفحص */
   .status-panel {
-    background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 8px;
-    border-right: 4px solid var(--neon-blue); margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.6); padding: 30px 20px; border-radius: 8px;
+    border-right: 4px solid var(--neon-blue); margin-bottom: 10px;
     position: relative; box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
   }
 
@@ -93,27 +82,10 @@
   #cache.cacheok { color: #00ff88; text-shadow: 0 0 8px rgba(0, 255, 136, 0.5); }
   .ok { color: #00ff88; } .bad { color: #ff0055; } .warn { color: #fdd663; }
 
-  /* كروت التواصل */
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-  .contact-card {
-    background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s;
-    display: flex; align-items: center; justify-content: center; flex-direction: column;
-  }
-  .contact-card.full { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; text-align: right; }
-  .contact-card:hover { border-color: var(--neon-purple); background: rgba(176, 0, 255, 0.1); box-shadow: 0 0 15px rgba(176, 0, 255, 0.3); }
-  
-  .c-title { color: var(--neon-blue); font-size: 14px; font-weight: 800; margin-bottom: 5px; display: block; }
-  .full .c-title { margin-bottom: 0; margin-left: 15px; font-size: 16px; }
-  .c-val { color: #fff; font-size: 18px; font-weight: 900; direction: ltr; }
-  .full .c-val { font-size: 15px; direction: rtl; line-height: 1.5; flex: 1; }
-
   .footer-sys { position: fixed; bottom: 10px; right: 20px; font-family: 'Orbitron', sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 2px; z-index: 2; }
 
   @media (max-width: 600px) {
-    .brand-title { font-size: 3rem; } .contact-grid { grid-template-columns: 1fr; }
-    .contact-card.full { flex-direction: column; text-align: center; }
-    .full .c-title { margin-left: 0; margin-bottom: 5px; } .full .c-val { text-align: center; }
+    .brand-title { font-size: 3rem; } .hud-container { padding: 40px 15px; }
   }
 </style>
 </head>
@@ -121,9 +93,8 @@
 
 <div class="hud-container">
   
-  <h1 class="brand-title">GAME SHOP</h1>
-  <div class="brand-sub">PS4 Jailbreak 11.00 - 12.00 - 13.00</div>
-  <div class="engineer-badge">مهندس : محمود فتحى</div>
+  <h1 class="brand-title">PRO JAILBREAK</h1>
+  <div class="brand-sub">FW 11.00 - 12.00 - 13.00</div>
 
   <div class="status-panel">
     <div id="state">جارٍ فحص النظام...</div>
@@ -131,24 +102,9 @@
     <div id="cache"></div>
   </div>
 
-  <div class="contact-grid">
-    <div class="contact-card full">
-      <span class="c-title">📍 العنوان:</span>
-      <span class="c-val">المنصورة حى الجامعة شارع الإيمان، أول شارع بجوار الجامعة بلازا، مطعم هوت ميكس (موجودين فى نص الشارع).</span>
-    </div>
-    <div class="contact-card">
-      <span class="c-title">📱 الموبايل</span>
-      <span class="c-val">01024388999<br>01024244499</span>
-    </div>
-    <div class="contact-card">
-      <span class="c-title">☎️ الأرضي</span>
-      <span class="c-val" style="line-height: 2.5;">0502370475</span>
-    </div>
-  </div>
-
 </div>
 
-<div class="footer-sys">GAME SHOP OS v2.0</div>
+<div class="footer-sys">SYS_CORE v2.0</div>
 
 <script>
 (function () {
